@@ -6,7 +6,7 @@
 /*   By: rlechapt <rlechapt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/08 18:23:08 by rlechapt          #+#    #+#             */
-/*   Updated: 2015/03/10 06:49:35 by rlechapt         ###   ########.fr       */
+/*   Updated: 2015/04/01 05:33:39 by rlechapt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,12 +220,54 @@ void		check_cat(void)
 	printf("[-] Cat for file : \n");
 	ft_cat(i);
 	close(i);
-//	printf("\n[+] END OF CAT [+]\n");
+	printf("\n[+] END OF CAT [+]\n");
+}
+
+void		check_strcpy(void)
+{
+	char	src[] = "salut";
+	char	dst[] = "cava?";
+	char	*str;
+
+	printf("[+] STRCPY [+]\n");
+	printf("[-] Dst after strcpy [-]\n");
+	printf("[-] Dst: %s [-]\n", ft_strcpy((void*)dst, (void*)src));
+	printf("[+] END OF STRCPY [+]\n");
+}
+
+void		check_isspace(void)
+{
+	printf("[-] ISSPACE [-]\n");
+	printf("[+] Test on %c, return = %d [+]\n", 'a', ft_isspace('a'));
+	printf("[+] Test on %c, return = %d [+]\n", 'Z', ft_isspace('Z'));
+	printf("[+] Test on %c, return = %d [+]\n", '*', ft_isspace('*'));
+	printf("[+] Test on %c, return = %d [+]\n", ' ', ft_isspace(' '));
+	printf("[+] Test on \\n, return = %d [+]\n", ft_isspace('\n'));
+	printf("[+] Test on \\t, return = %d [+]\n", ft_isspace('\t'));
+	printf("[+] Test on \\v, return = %d [+]\n", ft_isspace('\v'));
+	printf("[+] Test on \\f, return = %d [+]\n", ft_isspace('\f'));
+	printf("[+] Test on \\r, return = %d [+]\n", ft_isspace('\r'));
+	printf("[-] Test with NULL [-]\n");
+	printf("[+] Test return = %d [+]\n", ft_isspace(0));
+	printf("[-] END OF ISSPACE [-]\n");
+}
+
+void		check_abs(void)
+{
+	printf("[-] ABS [-]\n");
+	printf("[+] Test on %d, return = %d [+]\n", 0, ft_abs(0));
+	printf("[+] Test on %d, return = %d [+]\n", 1, ft_abs(1));
+	printf("[+] Test on %d, return = %d [+]\n", 10, ft_abs(10));
+	printf("[+] Test on %d, return = %d [+]\n", -1, ft_abs(-1));
+	printf("[+] Test on %d, return = %d [+]\n", -5, ft_abs(-5));
+	printf("[+] Test on %d, return = %d [+]\n", -20, ft_abs(-20));
+	printf("[-] Test with NULL [-]\n");
+	printf("[+] Test return = %d [+]\n", ft_abs(0));
+	printf("[-] END OF ABS [-]\n");
 }
 
 int			main(void)
 {
-	//	ft_nebre();
 	check_digit();
 	printf("\n");
 	check_alpha();
@@ -242,8 +284,6 @@ int			main(void)
 	printf("\n");
 	check_bzero();
 	printf("\n");
-	//	check_memalloc();
-	//	printf("\n");
 	check_strlen();
 	printf("\n");
 	check_strdup();
@@ -255,7 +295,12 @@ int			main(void)
 	check_strcat();
 	printf("\n");
 	check_cat();
-	/*		check_b();
-			printf("\n");*/
+	printf("\n");
+	check_strcpy();
+	printf("\n");
+	check_isspace();
+	printf("\n");
+	check_abs();
+	printf("\n");
 	return 0;
 }

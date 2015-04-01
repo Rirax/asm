@@ -6,7 +6,7 @@
 /*   By: rlechapt <rlechapt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/08 18:20:44 by rlechapt          #+#    #+#             */
-/*   Updated: 2015/03/10 06:23:22 by rlechapt         ###   ########.fr       */
+/*   Updated: 2015/04/01 05:32:27 by rlechapt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,8 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 char	*ft_strdup(const char *s1);
 void	ft_cat(int fd);
-/*void	ft_exit(int ret);
-void	ft_filezero(char *file);
-void	ft_log(char *file);
-void	*ft_memalloc(size_t n);
-void	ft_nebre(void);
-char	*ft_strcpy(char *dst, char *src);*/
+char	*ft_strcpy(char *dst, char *src);
+int		ft_isspace(char c);
+int		ft_abs(int a);
 
 #endif

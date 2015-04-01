@@ -2,6 +2,8 @@ section .text
 global	_ft_strcat
 
 _ft_strcat:
+	push	rbp
+	mov		rbp, rsp
 	mov		rbx, rdi
 	mov		rcx, rsi
 
@@ -21,5 +23,8 @@ loop2:
 	jmp		loop2
 
 end:
+	mov		byte [rbx], 0
 	mov		rax, rdi
+	mov		rsp, rbp
+	pop		rbp
 	ret

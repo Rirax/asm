@@ -6,7 +6,7 @@
 #    By: rlechapt <rlechapt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/08 15:15:46 by rlechapt          #+#    #+#              #
-#    Updated: 2015/03/10 06:24:32 by rlechapt         ###   ########.fr        #
+#    Updated: 2015/04/01 05:34:29 by rlechapt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,10 @@ SRC = ft_islower.s \
 	  ft_memset.s \
 	  ft_memcpy.s \
 	  ft_strdup.s \
-	  ft_cat.s
+	  ft_cat.s \
+	  ft_strcpy.s \
+	  ft_isspace.s \
+	  ft_abs.s
 
 OBJ = $(SRC:%.s=%.o)
 NAME = libfts.a

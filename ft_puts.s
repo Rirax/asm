@@ -14,7 +14,7 @@ _ft_puts:
 	jle		exit
 	cmp		rdi, 0
 	jne		suite
-	mov		rdi, null
+	lea		rdi, [rel null]
 
 suite:
 	push	rdx
@@ -40,7 +40,7 @@ end:
 	mov		rax, 1
 	mov		rax, SYSCALL(4)
 	mov		rdi, 1
-	mov		rsi, break
+	lea		rsi, [rel break]
 	mov		rdx, 1
 	syscall
 	leave
